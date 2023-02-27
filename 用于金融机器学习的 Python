@@ -47,3 +47,25 @@ plt.xlabel('BAC Price', fontsize=12)
 plt.ylabel('JPM Price', fontsize=12)
 # Function for showing graph
 plt.show()
+
+#绘制日收益直方图
+#预测股票价格变化，通常预测股票百分比（日收益）变化
+#简单的时间序列具有很强的相关性
+# Daily returns日收益 shift(1) 时间移动之前一格
+daily_pct_c = daily_close / daily_close.shift(1) - 1
+
+#百分比变换 当前元素和先前元素之间的百分比变化 当前5天价格变化百分比 时间序列分析
+tesla_data['daily_pct_c']= tesla_data['Adj Close'].pct_change(5)
+
+# Histogram of daily returns
+plt.figure(figsize=(10,7))
+data['daily_returns_BAC'].plot(kind='hist')
+
+# Set the title of the plot
+plt.title('Daily Returns of BAC', fontsize=14)
+# Setting the x-axis title
+plt.xlabel('Returns', fontsize=12)
+# Setting the y-axis title
+plt.ylabel('Frequency', fontsize=12)
+# Function for showing graph
+plt.show()
