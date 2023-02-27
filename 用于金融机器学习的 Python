@@ -1,0 +1,14 @@
+import talib as ta
+import pandas as pd
+tesla_data = pd.read_csv(r'C:\Users\86130\Downloads\TSLA.csv',index_col='Date')
+tesla_data['SMA']=ta.SMA(tesla_data['Adj Close'],16)
+tesla_data.SMA.plot(grid=True,title='tesla_data.SMA')
+
+# Convert the index to date_time format
+coca_cola.index = pd.to_datetime(coca_cola.index)
+
+# Display the data
+coca_cola.head()
+#这是一个以 Date 列为索引的时间序列数据。因此您可以将索引转换为日期时间格式。
+#使用日期时间索引比使用字符串索引简单得多，因为您可以在 Python 中使用日期时间对象执行很多操作。
+#您可以使用 pandas.to_datetime 方法将索引转换为日期时间。
