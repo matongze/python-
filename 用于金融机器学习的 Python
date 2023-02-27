@@ -12,3 +12,20 @@ coca_cola.head()
 #这是一个以 Date 列为索引的时间序列数据。因此您可以将索引转换为日期时间格式。
 #使用日期时间索引比使用字符串索引简单得多，因为您可以在 Python 中使用日期时间对象执行很多操作。
 #您可以使用 pandas.to_datetime 方法将索引转换为日期时间。
+# Import library for data visualisation
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+# Set the plot style
+plt.style.use('seaborn-darkgrid')
+
+# Plotting the close price column
+tesla_data['SMA'].plot(figsize=(10, 7), color='green')
+# Setting the graph title
+plt.title("Closing Price of BAC", fontsize=14)
+# Setting the x-axis title
+plt.xlabel('Year-Month', fontsize=12)
+# Setting the y-axis title
+plt.ylabel('Price ($)', fontsize=12)
+# Function for showing graph
+plt.show()
