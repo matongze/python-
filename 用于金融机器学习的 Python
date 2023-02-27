@@ -69,3 +69,7 @@ plt.xlabel('Returns', fontsize=12)
 plt.ylabel('Frequency', fontsize=12)
 # Function for showing graph
 plt.show()
+
+#从BAC收盘价的折线图可以看出，在指定的时间段内，价格大约在18到39之间波动。
+#从散点图中，您可以说 BAC 和 JPM 的收盘价相互同步移动。
+#从柱状图中可以看出，BAC的日收益率大部分时间都保持在-5%到8%之间。
