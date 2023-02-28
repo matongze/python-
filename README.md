@@ -7,3 +7,9 @@
 
 #https://blog.quantinsti.com/plotly-python/
 
+#关于Backtrader量化回测平台
+
+#https://www.backtrader.com
+
+#https://blog.quantinsti.com/backtrader/
+
