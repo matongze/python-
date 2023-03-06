@@ -15,3 +15,5 @@
 ADX:计算趋势的强弱 大于30
 RSI：动量的强弱 大于70 小于30
 sklearn 使用的ndarray 数据
+
+股票预测不能用split拆分
