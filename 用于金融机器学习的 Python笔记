@@ -41,3 +41,7 @@ plt.scatter(test_predictions, test_targets, label='test')
 plt.legend()
 plt.show()
 查看测试集与预测集的分布
+随机森林
+max_features=特征总数的平方根
+max_depth=5-20n
+n_estimators 随机森林决策树的数量 大于100趋于平缓
