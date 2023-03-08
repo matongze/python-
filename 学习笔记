@@ -17,3 +17,7 @@ RSI：动量的强弱 大于70 小于30
 sklearn 使用的ndarray 数据
 
 股票预测不能用split拆分
+
+ta.SMA(VALUE=pandas.values
+ta跟机器学习一样要求使用ndarray
+
