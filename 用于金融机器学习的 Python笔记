@@ -31,3 +31,13 @@ xlim 坐标的最大值最小值
 drop_first=True 其实星期一代表星期二
 
 决策树根据数的唯一值进行拆分
+
+sklearn.tree.DecisionTreeRegressor.score可以为负数，证明预测数据很糟糕
+
+train_predictions = decision_tree.predict(train_features)
+test_predictions = decision_tree.predict(test_features)
+plt.scatter(train_predictions, train_targets, label='train')
+plt.scatter(test_predictions, test_targets, label='test')
+plt.legend()
+plt.show()
+查看测试集与预测集的分布
