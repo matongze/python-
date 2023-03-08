@@ -49,3 +49,8 @@ n_estimators 随机森林决策树的数量 大于100趋于平缓
 **kwarg 代表此函数可以有更多不确定的入参
 
 模型的选择需要具体问题具体分析，金融数据特点尖峰厚尾，预测方向预测对就行。
+
+
+https://quantra.quantinsti.com/startCourseDetails?cid=189&section_no=6&unit_no=8&course_type=free&unit_type=Notebook
+
+机器学习要求数据平稳
