@@ -54,3 +54,9 @@ n_estimators 随机森林决策树的数量 大于100趋于平缓
 https://quantra.quantinsti.com/startCourseDetails?cid=189&section_no=6&unit_no=8&course_type=free&unit_type=Notebook
 
 机器学习要求数据平稳
+金融时间序列数据
+对于时间序列数据，索引的顺序很重要，您不能进行随机改组
+因为时间序列数据中的索引是一个接一个（按顺序）出现的时间戳。
+如果打乱时间戳，数据将毫无意义。
+您不能使用 2021 年的数据来训练您的模型，然后使用该模型来预测 2017 年的价格。
+这在现实生活中是不可能的，因为我们无法访问未来的数据。
