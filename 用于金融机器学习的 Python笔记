@@ -60,3 +60,6 @@ https://quantra.quantinsti.com/startCourseDetails?cid=189&section_no=6&unit_no=8
 如果打乱时间戳，数据将毫无意义。
 您不能使用 2021 年的数据来训练您的模型，然后使用该模型来预测 2017 年的价格。
 这在现实生活中是不可能的，因为我们无法访问未来的数据。
+
+# Obtain the features and target for the `train_data` and `test_data` without shuffling
+X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.80, shuffle=False)
