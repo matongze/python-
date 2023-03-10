@@ -63,3 +63,5 @@ https://quantra.quantinsti.com/startCourseDetails?cid=189&section_no=6&unit_no=8
 
 # Obtain the features and target for the `train_data` and `test_data` without shuffling
 X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.80, shuffle=False)
+
+f1-score 数值越高证明拟合效果越好
