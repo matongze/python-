@@ -65,3 +65,6 @@ https://quantra.quantinsti.com/startCourseDetails?cid=189&section_no=6&unit_no=8
 X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.80, shuffle=False)
 
 f1-score 数值越高证明拟合效果越好
+
+尝试不同的基于树的模型并查看所有模型的特征重要性是很好的。
+这可以帮助平衡一个特定模型可能产生的任何特性。
