@@ -84,3 +84,5 @@ import keras.losses
 keras.losses.mean_squared_error = mean_squared_er
 
 损失函数强大到迫使全部预测到模型
+
+创建一个自定义损失函数，该损失函数对预测错误方向的价格变动有很大的惩罚
