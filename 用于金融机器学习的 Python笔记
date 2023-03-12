@@ -75,3 +75,5 @@ f1-score 数值越高证明拟合效果越好
 神经网络通过
 from sklearn.metrics import r2_score
 评估拟合效果
+
+方向对于股票预测很重要
