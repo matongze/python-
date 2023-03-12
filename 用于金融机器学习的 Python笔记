@@ -77,3 +77,10 @@ from sklearn.metrics import r2_score
 评估拟合效果
 
 方向对于股票预测很重要
+def mean_squared_error(y_true, y_pred):    
+  loss = tf.square(y_true - y_pred)
+  return tf.reduce_mean(loss, axis=-1)
+import keras.losses
+keras.losses.mean_squared_error = mean_squared_er
+
+损失函数强大到迫使全部预测到模型
