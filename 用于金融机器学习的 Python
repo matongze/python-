@@ -5,10 +5,10 @@ tesla_data['SMA']=ta.SMA(tesla_data['Adj Close'],16)
 tesla_data.SMA.plot(grid=True,title='tesla_data.SMA')
 
 # Convert the index to date_time format
-coca_cola.index = pd.to_datetime(coca_cola.index)
+tesla_data.index = pd.to_datetime(tesla_data.index)
 
 # Display the data
-coca_cola.head()
+tesla_data.head()
 #这是一个以 Date 列为索引的时间序列数据。因此您可以将索引转换为日期时间格式。
 #使用日期时间索引比使用字符串索引简单得多，因为您可以在 Python 中使用日期时间对象执行很多操作。
 #您可以使用 pandas.to_datetime 方法将索引转换为日期时间。
@@ -56,10 +56,12 @@ daily_pct_c = daily_close / daily_close.shift(1) - 1
 
 #百分比变换 当前元素和先前元素之间的百分比变化 当前5天价格变化百分比 时间序列分析
 tesla_data['daily_pct_c']= tesla_data['Adj Close'].pct_change(5)
+tesla_data['daily_pct_c']= tesla_data['Adj Close'].pct_change()
+
 
 # Histogram of daily returns
 plt.figure(figsize=(10,7))
-data['daily_returns_BAC'].plot(kind='hist')
+tesla_data['daily_pct_c'].plot(kind='hist')
 
 # Set the title of the plot
 plt.title('Daily Returns of BAC', fontsize=14)
@@ -73,3 +75,19 @@ plt.show()
 #从BAC收盘价的折线图可以看出，在指定的时间段内，价格大约在18到39之间波动。
 #从散点图中，您可以说 BAC 和 JPM 的收盘价相互同步移动。
 #从柱状图中可以看出，BAC的日收益率大部分时间都保持在-5%到8%之间。
+
+#建立目标与特征
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import talib as ta
+from statsmodels.tsa.stattools import adfuller
+#建立目标
+# Create a column 'future_returns' with the calculation of percentage change
+data['future_returns'] = data['close'].pct_change().shift(-1)
+
+# Create the signal column
+data['signal'] = np.where(data['future_returns'] > 0, 1, 0)
+
+data.head()
+
