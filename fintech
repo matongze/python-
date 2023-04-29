@@ -1,0 +1,15 @@
+
+import pandas as pd
+df=pd.read_csv("sample_submit.csv")
+df1=pd.read_csv("/data/train_base.csv")
+df2=pd.read_csv("/data/train_trx.csv")
+df3=pd.read_csv("/data/train_view.csv", encoding='latin-1')
+import numpy as np
+import pandas as pd
+ 
+ 
+np.set_printoptions(threshold=np.inf)#不显示省略号
+ 
+ 
+pd.set_option('display.max_rows', None)#显示全部行
+pd.set_option('display.max_columns', None)#显示全部列
